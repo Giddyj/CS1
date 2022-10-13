@@ -20,25 +20,32 @@ public class Grades2 {
       Scanner scanner = new Scanner(System.in);
       newGrade = scanner.next().charAt(0);
       
+      int totalPoints = 0; 
+      
       if (newGrade == 'a')
       {
         System.out.println("Outstanding");
+        totalPoints = + 4;
       }
       if (newGrade == 'b')
       {
         System.out.println("Above average");
+        totalPoints = + 3;
       }
       if (newGrade == 'c')
       {
         System.out.println("Average");
+        totalPoints = + 2;
       }
       if (newGrade == 'd')
       {
         System.out.println("Below average");
+        totalPoints = + 1;
       }
       if (newGrade == 'f')
       {
         System.out.println("Try again");
+        totalPoints = + 0;
       }
       
       grades[i] = newGrade;
@@ -66,7 +73,7 @@ public class Grades2 {
       }
     }
     
-    
+    System.out.println( totalPoints );
     
   }
 }
