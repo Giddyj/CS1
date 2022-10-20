@@ -1,0 +1,56 @@
+import java.util.Scanner;
+
+public class Grades2
+{
+  public static void main( String[] args )
+  {
+    
+    int NUMBER_OF_COURSES = 5;
+    int totalQualityPoints;
+    double GPA; // Grade Point Average
+    int QP = 0; // only need to store quality points
+    String courseGrade;
+    int[] courseNumber ={5};
+    
+    Scanner in = new Scanner( System.in );
+    
+    for (int n = 1; n<=5; n++) 
+    {
+      System.out.print( "Enter Class "+n+" grade : " );
+      courseGrade = in.next();
+      
+      if ( courseGrade.equals( "A" ) )
+      {
+        System.out.println( "Outstanding" );
+        QP += 4;
+      }
+      if ( courseGrade.equals( "B" ) )
+      {
+        System.out.println( "Above average" );
+        QP += 3;
+      }
+      if ( courseGrade.equals( "C" ) )
+      {
+        System.out.println( "Average" );
+        QP += 2;
+      }
+      if ( courseGrade.equals( "D" ) )
+      {
+        System.out.println( "Below average" );
+        QP += 1;
+      }
+      if ( courseGrade.equals( "F" ) )
+      {
+        System.out.println( "Try again" );
+        QP += 0;
+      }
+    }
+    
+    System
+    
+    GPA = QP/NUMBER_OF_COURSES;
+    
+    System.out.println(GPA);
+    
+  }
+}
